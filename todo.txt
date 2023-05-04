@@ -1,4 +1,0 @@
-1. terminar el about, con informacion conjunta entre lo que dieron ellos en el about + lo que dieron en Servicios>Venta de palets
-2. Ver que hacer con los otros 2 servicios, teniendo en cuenta que deberian haber fotos para rellenar porque es muy poca informacion al respecto.
-3. Revisar estilos de products, no me termina de convencer.
-4. Mandar footer a las otras secciones. (products y about)
