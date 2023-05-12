@@ -1,7 +1,7 @@
 :root {
     --main-beige-color: #D2BD96;
     --main-beige-color-opacity:#d2bd96c2;
-    --main-bg-card-color: #b4b2b26c;
+    --main-bg-card-color: #e4dbcd;
     --main-beige-divider-color: #d3c9b0;
     --main-bg-footer: #514c44;
     --main-font-color:rgb(53, 49, 49);
@@ -34,11 +34,12 @@
 
 
 body{
-    background: url("./assets/wallpaper-minimalist.avif");
-    background-attachment: fixed;
+    /* background: url("./assets/wallpaper-minimalist.avif"); */
+    /* background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: cover; */
+    background-color: rgba(230, 230, 230, 0.568) !important;
 }
 
 .color-bold{
@@ -133,7 +134,7 @@ body{
 .about-container{
     margin: 3% 6% ;
     border-radius: 50px;
-    box-shadow: -10px 0px 25px rgba(0, 0, 0, 0.774);
+    box-shadow: -10px 0px 25px rgba(0, 0, 0, 0.247);
 }
 
 .about-item-container{
@@ -188,7 +189,7 @@ body{
     font-size: 19px;
 }
 
-.horizontal-line{
+.vertical-line{
     border-left: 2px rgb(99, 98, 98) solid;
     width: 2px;
     height: 18vh;
@@ -215,13 +216,13 @@ body{
     flex-direction: column;
     gap: 50px;
     border-radius: 10px;
+    border: rgba(255, 255, 255, 0.705) solid 1px;
     margin: 0px 40px 100px;
     padding: 20px 0px;
     width: 60%;
     height: 70vh;
-    box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.493);
-    background-color: rgb(221, 221, 221);
-
+    box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.185);
+    background-color: var(--main-bg-card-color);
 }
 
 .product-button{
@@ -267,11 +268,74 @@ body{
 
 .product-item h2 {
     font-weight: bold;
+    text-align: center;
+    max-width: 30vh;
 }
 
 .product-item button{
     position:relative;
 }
+
+.services-item-container{
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 5vh;
+    margin-bottom: 6vh;
+}
+
+.service-item{
+    background-color: var(--main-bg-card-color);
+    border-radius: 10px;
+    border: 2px white solid;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.411);
+    width: 30vw;
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.service-item h2, .service-item p{
+    padding-left: 24px;
+    padding-right: 24px;
+    text-align: center;
+}
+
+.service-info{
+    font-size: 22px;
+    min-height: 45vh;
+    
+}
+
+.service-item h2{
+    font-size: 40px;
+    font-weight: 700;
+    text-decoration: underline;
+}
+
+.service-button{
+    font-size: 20px;
+    width: 20vh;    
+    padding: 15px;
+    border:none;
+    background-color: #8d877b;
+    border-radius: 5px;
+    color: var(--main-font-color);
+    text-decoration: none;
+    font-weight: bold;
+    text-align: center;
+}
+
+.service-button:hover{
+    background-color: #aca599;
+    color: rgb(78, 78, 78);
+    transition: 0.15s ease all;
+    cursor:pointer;
+}
+
+
+
 
 .contact-icon{
     position:fixed;
@@ -303,7 +367,7 @@ body{
 .contact-item{
     height: 8vh;
     width: 26vw;
-    background-color: rgb(221, 221, 221);
+    background-color: rgb(241, 241, 241);
     border: 2px solid white;
     box-shadow: 3px 3px 5px rgb(54, 54, 54);
     border-radius: 8px;
@@ -330,7 +394,7 @@ body{
 }
 
 .map {
-    background-color: rgb(221, 221, 221);
+    background-color: rgb(241, 241, 241);
     border: 2px solid white;
     box-shadow: 3px 3px 8px rgb(32, 32, 32);
     border-radius: 8px;
@@ -363,3 +427,171 @@ footer img{
     bottom: 0px;
     width: 100vw;
 }
+
+
+
+/* MEDIA QUERY */
+
+
+@media screen and (max-width: 650px) {
+
+    /* NAVBAR */
+    .dropdown-menu{
+        background-color: #daccb4 !important;
+
+    }
+    .logo{
+        width: 15vw;
+        padding-left: 2vw;
+    }
+
+    /* FOOTER */
+    footer{
+        width: 100vw;
+        font-size: 12px;
+        justify-content: space-between;
+        padding: 0px 2vw;
+    }
+    footer img{
+        width: 35vw;
+    }
+    .invisible-footer{
+        display: none;
+    }
+
+    .contact-icon{
+        width: 10vw;
+        left: 5%;
+    }
+
+    /* INDEX */
+    .divider{
+        flex-direction: column;
+        padding-right: 0px;
+    }
+    .divider-item{
+        width: 85vw;
+    }
+
+    .second-divider{
+        font-size: 19px;
+
+    }
+
+    .second-divider p{
+        padding: 0;
+    }
+
+    /* ABOUT */
+    .about-container{
+        margin: 0;
+        border-radius: 0;
+    }
+    .first-about{
+        margin-top: 2vh;
+        flex-direction: column;
+    }
+    .about-title{
+        font-size: 20px;
+    }
+    .first-about img{
+        border-radius: 20px;
+        width: 90vw;
+    }
+    .vertical-line, .horizontal-line{
+        border-bottom: 2px rgb(99, 98, 98) solid;
+        height: 2px;
+    }
+    .horizontal-line{
+        width: 80vw;
+    }
+    .vertical-line{
+        width: 40vw;
+        margin-bottom: 2vh;
+    }
+
+    .second-about{
+        flex-direction: column;
+        margin-top: 3vh;
+    }
+
+    .second-about p{
+        max-width: 90vw;
+    }
+
+    .third-about{
+        margin-top: 2vh;
+    }
+
+    .product-item-container{
+        margin-top: 0vh;
+    }
+    .product-item{
+        margin: 1vh 3vw 3vh 3vw;
+        max-height: 90vh;
+        min-height: 60vh;
+        height: auto;
+    }
+    .product-info{
+        flex-direction: column;
+        align-items: center;
+    }
+    .product-info img{
+        width: 80vw;
+        border-width: 1px;
+    }
+
+    .product-text{
+        max-width: 90vw;
+        
+    }
+
+    .product-text h2{
+        text-align: center;
+    }
+
+    :root{
+        --main-bg-card-color: #c0b5a2;
+
+    }
+
+    /* SERVICIOS */
+    .services-item-container{
+        flex-direction: column;
+        align-items: center;
+        gap: 2vh;
+        margin-top: 2vh;
+    }
+
+    .service-item{
+        width: 90vw;
+        padding-bottom: 1vh;
+    }
+
+    /* CONTACTO */
+    .contact-container{
+        flex-direction: column;
+        padding-top: 3vh;
+    }
+
+    .contact-item{
+        width: 90vw;
+    }
+
+    .map-container, .map iframe{
+        width: 90vw;
+    }
+    
+    .no-scroll-footer{
+        position:relative;
+    }
+
+  }
+
+
+  @media screen and (max-width: 1150px) {
+    .product-item{
+        width: 100vw;
+    }
+
+  }
