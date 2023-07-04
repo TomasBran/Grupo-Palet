@@ -1,7 +1,7 @@
 :root {
     --main-beige-color: #D2BD96;
     --main-beige-color-opacity:#d2bd96c2;
-    --main-bg-card-color: #e4dbcd;
+    --main-bg-card-color: #b9a37b;
     --main-beige-divider-color: #d3c9b0;
     --main-bg-footer: #514c44;
     --main-font-color:rgb(53, 49, 49);
@@ -34,12 +34,7 @@
 
 
 body{
-    /* background: url("./assets/wallpaper-minimalist.avif"); */
-    /* background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover; */
-    background-color: rgba(230, 230, 230, 0.568) !important;
+    background-color: rgb(226, 226, 226) !important;
 }
 
 .color-bold{
@@ -220,7 +215,7 @@ body{
     margin: 0px 40px 100px;
     padding: 20px 0px;
     width: 60%;
-    height: 70vh;
+    max-height: 80vh;
     box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.185);
     background-color: var(--main-bg-card-color);
 }
@@ -237,11 +232,11 @@ body{
     text-decoration: none;
     font-weight: bold;
     text-align: center;
+    transition: all ease-in 75ms;
 
 }
 
 .product-button:hover{
-    transition: all ease-in 75ms;
     transform: scale(1.10);
     background-color: #f7e5c6c2;
     cursor: pointer;
@@ -343,11 +338,11 @@ body{
     bottom: 2%;
     right: 2%;
     width: 4%;
+    transition: all ease-in 100ms;
 }
 
 .contact-icon:hover{
     transform: scale(1.5) translateY(-10px);
-    transition: all ease-in 100ms;
 }
 
 .contact-data-container{
@@ -482,6 +477,12 @@ footer img{
         padding: 0;
     }
 
+    .divider img{
+        padding-left: 0;
+        padding-right: 0;
+        width: 100vw;
+    }
+
     /* ABOUT */
     .about-container{
         margin: 0;
@@ -523,12 +524,14 @@ footer img{
         margin-top: 2vh;
     }
 
+
+    /* PRODUCT */
     .product-item-container{
         margin-top: 0vh;
     }
     .product-item{
         margin: 1vh 3vw 3vh 3vw;
-        max-height: 90vh;
+        max-height: 125vh;
         min-height: 60vh;
         height: auto;
     }
@@ -556,11 +559,24 @@ footer img{
     }
 
     /* SERVICIOS */
+
+    .service-item h2{
+        font-size: 3.5vh;
+    }
+
+    .service-item p{
+        font-size: 2.5vh;
+    }
     .services-item-container{
         flex-direction: column;
         align-items: center;
         gap: 2vh;
         margin-top: 2vh;
+    }
+
+    .service-item{
+        min-height: 60vh;
+        max-height: 80vh;
     }
 
     .service-item{
